@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pinch="clr-namespace:Xamarin.Forms.PinchZoomImage;assembly=Xamarin.Forms.PinchZoomImage"
+             x:Class="task4.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="Gray" Padding="10" CornerRadius="0" >
+            <Label  HorizontalTextAlignment="Center" 
+                    Text="Pick and Captuer Image with zoom in ,zoom out feauter" 
+                    TextColor="Black"
+                    TextDecorations="None"/>
+        </Frame>
+        <Button Text="Pick Image"  Clicked="Button_Clicked" Margin="10" CornerRadius="5" WidthRequest="30" HeightRequest="50"
+                VerticalOptions="Fill"  HorizontalOptions="Fill" BackgroundColor="CadetBlue"></Button>
+        
+        <Button Text="take Image"  Clicked="Button1_Clicked" Margin="10" CornerRadius="5" WidthRequest="30" HeightRequest="50"
+                VerticalOptions="Fill"  HorizontalOptions="Fill"  Background="cadetBlue "></Button>
+        
+        <pinch:PinchZoom>
+            <pinch:PinchZoom.Content>
+                <Image x:Name="result_image" Source="xamarin.jpg"></Image>
+            </pinch:PinchZoom.Content>
+
+        </pinch:PinchZoom>
+
+    </StackLayout>
+
+</ContentPage>
